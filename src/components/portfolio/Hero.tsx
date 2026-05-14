@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Github, Linkedin, Mail, Download, FolderGit2, ArrowUpRight } from "lucide-react";
 
 const badges = ["Python", "MERN Stack", "AI/ML", "FastAPI", "React.js", "Open Source"];
@@ -10,16 +11,19 @@ export function Hero() {
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           Available for opportunities
         </div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+  <div className="w-[500px] h-[500px] bg-white/5 blur-3xl rounded-full" />
+</div>
 
         <h1 className="text-4xl sm:text-7xl md:text-8xl font-semibold tracking-tight text-gradient leading-[1.05] animate-fade-up">
           Shreya Tiwari
         </h1>
 
         <p className="mt-5 text-sm sm:text-lg text-muted-foreground font-medium animate-fade-up delay-100">
-          Python Developer · Full Stack MERN · AI/ML Enthusiast
+          Python Developer · Full Stack MERN Developer · AI/ML Enthusiast
         </p>
 
-        <p className="mt-6 max-w-2xl mx-auto text-sm sm:text-lg text-muted-foreground/90 leading-relaxed animate-fade-up delay-200">
+        <p className="mt-6 max-w-xl mx-auto text-sm sm:text-lg text-muted-foreground/90 leading-relaxed animate-fade-up delay-200">
           Python and Full Stack MERN developer with experience in machine learning, backend
           development, and open-source collaboration. Skilled in FastAPI, React.js, Node.js,
           and database technologies with a strong interest in AI/ML and problem solving.
@@ -41,9 +45,15 @@ export function Hero() {
           <a href="#projects" className="glass glow-on-hover px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium inline-flex items-center gap-2">
             <FolderGit2 className="w-4 h-4" /> View Projects
           </a>
-          <a href="/resume.pdf" download className="cta-solid px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium inline-flex items-center gap-2 transition-opacity">
-            <Download className="w-4 h-4" /> Download Resume
-          </a>
+        <a
+  href="https://drive.google.com/uc?export=download&id=1S6t9WGbuIrHyPsF7P1FqJGohvxpK-fqb"
+  target="_blank"
+  rel="noreferrer"
+  className="cta-solid px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium inline-flex items-center gap-2 transition-opacity"
+>
+  <Download className="w-4 h-4" />
+  Download Resume
+</a>
           <a href="https://github.com/Shreyat2406" target="_blank" rel="noreferrer" className="glass glow-on-hover px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium inline-flex items-center gap-2">
             <Github className="w-4 h-4" /> GitHub
           </a>
