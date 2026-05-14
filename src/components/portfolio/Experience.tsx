@@ -36,8 +36,8 @@ export function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title="A timeline of building & contributing.">
       <div className="relative">
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/15 to-transparent" />
-        <div className="space-y-10">
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px" style={{ background: "linear-gradient(to bottom, transparent, var(--divider-via), transparent)" }} />
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((e, i) => (
             <div
               key={e.role}
@@ -45,15 +45,15 @@ export function Experience() {
                 i % 2 === 0 ? "" : "md:[&>*:first-child]:col-start-2"
               }`}
             >
-              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.6)]" />
-              <div className={`glass rounded-3xl p-7 lift ml-12 md:ml-0 ${i % 2 === 0 ? "md:mr-8" : "md:ml-8"}`}>
+              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-foreground shadow-[0_0_20px_var(--ambient-1)]" />
+              <div className={`glass rounded-2xl sm:rounded-3xl p-5 sm:p-7 lift ml-10 md:ml-0 ${i % 2 === 0 ? "md:mr-8" : "md:ml-8"}`}>
                 <p className="text-xs text-muted-foreground mb-2">{e.date}</p>
-                <h3 className="text-lg font-semibold">{e.role}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{e.org}</p>
+                <h3 className="text-base sm:text-lg font-semibold">{e.role}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{e.org}</p>
                 <ul className="space-y-2">
                   {e.points.map((p) => (
                     <li key={p} className="text-sm text-muted-foreground/90 flex gap-2">
-                      <span className="text-foreground/40 mt-1.5 w-1 h-1 rounded-full bg-white/40 flex-shrink-0" />
+                      <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--dot-bg)" }} />
                       {p}
                     </li>
                   ))}
