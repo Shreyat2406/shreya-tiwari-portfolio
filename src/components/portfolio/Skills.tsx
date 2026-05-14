@@ -17,7 +17,7 @@ export function Skills() {
             <h3 className="text-sm font-semibold mb-5 text-foreground/90">{g.title}</h3>
             <div className="flex flex-wrap gap-2">
               {g.items.map((s) => (
-                <span key={s} className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-muted-foreground">
+                <span key={s} className="chip text-xs px-3 py-1.5 rounded-full text-muted-foreground">
                   {s}
                 </span>
               ))}

@@ -43,23 +43,23 @@ const others = [
 export function Projects() {
   return (
     <Section id="projects" eyebrow="Selected Work" title="Featured projects & experiments.">
-      <div className="space-y-6">
+      <div className="space-y-5 sm:space-y-6">
         {featured.map((p) => (
-          <article key={p.name} className="glass rounded-[2rem] p-8 sm:p-10 lift relative overflow-hidden group">
-            <div className="absolute -top-32 -right-32 w-72 h-72 rounded-full bg-white/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative grid md:grid-cols-3 gap-8">
+          <article key={p.name} className="glass rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-10 lift relative overflow-hidden group">
+            <div className="absolute -top-32 -right-32 w-72 h-72 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: "var(--ambient-1)" }} />
+            <div className="relative grid md:grid-cols-3 gap-6 md:gap-8">
               <div className="md:col-span-2">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{p.tag}</span>
                 </div>
-                <h3 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-2">{p.name}</h3>
-                <p className="text-sm text-muted-foreground mb-5">{p.title}</p>
-                <p className="text-base leading-relaxed text-muted-foreground/90 max-w-2xl">
+                <h3 className="text-2xl sm:text-4xl font-semibold tracking-tight mb-2">{p.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4">{p.title}</p>
+                <p className="text-sm sm:text-base leading-relaxed text-muted-foreground/90 max-w-2xl">
                   {p.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-6">
+                <div className="flex flex-wrap gap-2 mt-5">
                   {p.stack.map((s) => (
-                    <span key={s} className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-muted-foreground">
+                    <span key={s} className="chip text-xs px-3 py-1.5 rounded-full text-muted-foreground">
                       {s}
                     </span>
                   ))}
@@ -74,7 +74,7 @@ export function Projects() {
                 )}
                 {p.live && (
                   <a href={p.live} target="_blank" rel="noreferrer"
-                    className="bg-white text-black hover:bg-white/90 inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium transition-colors">
+                    className="cta-solid inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium transition-opacity">
                     <ExternalLink className="w-4 h-4" /> Live Demo
                   </a>
                 )}
@@ -84,8 +84,8 @@ export function Projects() {
         ))}
       </div>
 
-      <div className="mt-16">
-        <h3 className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">Other Projects</h3>
+      <div className="mt-10 sm:mt-14">
+        <h3 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-muted-foreground mb-5">Other Projects</h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {others.map((o) => (
             <a key={o.name} href={o.url} target="_blank" rel="noreferrer"

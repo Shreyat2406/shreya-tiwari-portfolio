@@ -16,8 +16,8 @@ export function Loader() {
         <div className="text-2xl font-semibold tracking-tight text-gradient animate-fade-in">
           Shreya Tiwari
         </div>
-        <div className="mt-4 w-32 h-px mx-auto bg-white/10 overflow-hidden">
-          <div className="h-full bg-white/70" style={{ animation: "shimmer 1.1s ease-out forwards", width: "100%", transformOrigin: "left", transform: "scaleX(0)", animationName: "loadbar" }} />
+        <div className="mt-4 w-32 h-px mx-auto overflow-hidden" style={{ background: "var(--glass-border-c)" }}>
+          <div className="h-full" style={{ background: "var(--foreground)", animation: "loadbar 1.1s ease-out forwards", width: "100%", transformOrigin: "left", transform: "scaleX(0)" }} />
         </div>
       </div>
       <style>{`@keyframes loadbar { from { transform: scaleX(0);} to { transform: scaleX(1);} }`}</style>
